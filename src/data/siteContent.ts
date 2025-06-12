@@ -1,117 +1,116 @@
 export const siteContent = {
   siteMetadata: {
-    pageTitle: "Top 5 Switch 2 Controllers",
-    currentMonth: "June",
-    currentYear: "2025",
-    topic: "Switch 2 Controllers",
-    metaDescription: "Top 5 product recommendations and reviews. Unbiased affiliate marketing template for product comparisons.",
-    siteTitle: "Top 5 Products - Affiliate Marketing Template"
+    pageTitle: "Top 5 [YOUR PRODUCT CATEGORY HERE]",
+    currentMonth: "[CURRENT MONTH]",
+    currentYear: "[CURRENT YEAR]",
+    topic: "[YOUR PRODUCT CATEGORY]",
+    metaDescription: "[DESCRIBE YOUR SITE IN 1-2 SENTENCES FOR SEO]",
+    siteTitle: "[YOUR SITE NAME] - [TAGLINE]"
   },
   products: [
     {
       id: 1,
-      name: "Pro Controller Elite X2",
-      description: "The ultimate wireless controller featuring advanced haptic feedback, customizable buttons, and an incredible 40-hour battery life. Engineered for competitive gaming with ultra-responsive triggers and premium build quality.",
-      affiliateUrl: "https://amazon.com/product-1",
-      reviewUrl: "https://example-review-site.com/pro-controller-elite-review",
-      price: "$79.99",
-      originalPrice: "$99.99",
-      rating: 4.9,
-      features: ["40h Battery", "Haptic Feedback", "Customizable Buttons", "Ultra-Responsive"],
-      imageUrl: "https://images.unsplash.com/photo-1606144042614-b2417e99c4e3?w=400&h=300&fit=crop&crop=center",
+      name: "[PRODUCT 1 NAME]",
+      description: "[DETAILED PRODUCT DESCRIPTION - 2-3 SENTENCES HIGHLIGHTING KEY FEATURES AND BENEFITS]",
+      affiliateUrl: "[YOUR AFFILIATE LINK]",
+      reviewUrl: "[LINK TO DETAILED REVIEW - OPTIONAL]",
+      price: "[CURRENT PRICE]",
+      originalPrice: "[ORIGINAL PRICE - OPTIONAL]",
+      rating: 4.8,
+      features: ["[FEATURE 1]", "[FEATURE 2]", "[FEATURE 3]", "[FEATURE 4]"],
+      imageUrl: "[PRODUCT IMAGE URL]",
       pros: [
-        "Exceptional 40-hour battery life",
-        "Premium build quality",
-        "Advanced haptic feedback",
-        "Highly customizable buttons"
+        "[POSITIVE POINT 1]",
+        "[POSITIVE POINT 2]",
+        "[POSITIVE POINT 3]",
+        "[POSITIVE POINT 4]"
       ],
       cons: [
-        "Higher price point",
-        "Slightly heavier than standard controllers"
+        "[NEGATIVE POINT 1]",
+        "[NEGATIVE POINT 2]"
       ]
     },
     {
       id: 2,
-      name: "GameMaster Pro Switch Controller",
-      description: "Ergonomic masterpiece with RGB lighting, programmable macros, and precision analog sticks. Features built-in gyroscope for motion controls and seamless wireless connectivity.",
-      affiliateUrl: "https://amazon.com/product-2",
-      reviewUrl: "https://example-review-site.com/gamemaster-pro-review",
-      price: "$64.99",
-      rating: 4.8,
-      features: ["RGB Lighting", "Programmable Macros", "Gyroscope", "Wireless"],
-      imageUrl: "https://images.unsplash.com/photo-1592750475338-74b7b21085ab?w=400&h=300&fit=crop&crop=center",
+      name: "[PRODUCT 2 NAME]",
+      description: "[DETAILED PRODUCT DESCRIPTION - HIGHLIGHT WHAT MAKES THIS PRODUCT UNIQUE]",
+      affiliateUrl: "[YOUR AFFILIATE LINK]",
+      reviewUrl: "[LINK TO DETAILED REVIEW - OPTIONAL]",
+      price: "[CURRENT PRICE]",
+      rating: 4.6,
+      features: ["[UNIQUE FEATURE 1]", "[UNIQUE FEATURE 2]", "[UNIQUE FEATURE 3]", "[UNIQUE FEATURE 4]"],
+      imageUrl: "[PRODUCT IMAGE URL]",
       pros: [
-        "Great value for money",
-        "Stunning RGB lighting effects",
-        "Programmable macros",
-        "Comfortable ergonomic design"
+        "[POSITIVE POINT 1]",
+        "[POSITIVE POINT 2]",
+        "[POSITIVE POINT 3]",
+        "[POSITIVE POINT 4]"
       ],
       cons: [
-        "RGB can drain battery faster",
-        "Macro setup can be complex for beginners"
+        "[NEGATIVE POINT 1]",
+        "[NEGATIVE POINT 2]"
       ]
     },
     {
       id: 3,
-      name: "Ultra Grip Wireless Controller",
-      description: "Premium textured grip surface with dual vibration motors and lightning-fast USB-C charging. Compatible with all Switch 2 games and features adjustable trigger sensitivity.",
-      affiliateUrl: "https://amazon.com/product-3",
-      reviewUrl: "https://example-review-site.com/ultra-grip-review",
-      price: "$54.99",
-      rating: 4.7,
-      features: ["Textured Grip", "Fast Charging", "Dual Vibration", "Adjustable Triggers"],
-      imageUrl: "https://images.unsplash.com/photo-1542751371-adc38448a05e?w=400&h=300&fit=crop&crop=center",
+      name: "[PRODUCT 3 NAME]",
+      description: "[DETAILED PRODUCT DESCRIPTION - FOCUS ON VALUE PROPOSITION]",
+      affiliateUrl: "[YOUR AFFILIATE LINK]",
+      reviewUrl: "[LINK TO DETAILED REVIEW - OPTIONAL]",
+      price: "[CURRENT PRICE]",
+      rating: 4.4,
+      features: ["[FEATURE 1]", "[FEATURE 2]", "[FEATURE 3]", "[FEATURE 4]"],
+      imageUrl: "[PRODUCT IMAGE URL]",
       pros: [
-        "Excellent grip texture",
-        "Fast USB-C charging",
-        "Great value for money",
-        "Adjustable trigger sensitivity"
+        "[POSITIVE POINT 1]",
+        "[POSITIVE POINT 2]",
+        "[POSITIVE POINT 3]"
       ],
       cons: [
-        "Basic design aesthetic",
-        "No advanced features like RGB"
+        "[NEGATIVE POINT 1]",
+        "[NEGATIVE POINT 2]"
       ]
     },
     {
       id: 4,
-      name: "PowerPlay Controller Pro",
-      description: "Tournament-grade controller with mechanical buttons, hall effect joysticks, and professional-level precision. Includes premium carrying case and extra thumbsticks.",
-      affiliateUrl: "https://amazon.com/product-4",
-      reviewUrl: "https://example-review-site.com/powerplay-review",
-      price: "$89.99",
+      name: "[PRODUCT 4 NAME]",
+      description: "[DETAILED PRODUCT DESCRIPTION - EMPHASIZE TARGET AUDIENCE]",
+      affiliateUrl: "[YOUR AFFILIATE LINK]",
+      reviewUrl: "[LINK TO DETAILED REVIEW - OPTIONAL]",
+      price: "[CURRENT PRICE]",
       rating: 4.9,
-      features: ["Mechanical Buttons", "Hall Effect Sticks", "Tournament Grade", "Carrying Case"],
-      imageUrl: "https://images.unsplash.com/photo-1611532736597-de2d4265fba3?w=400&h=300&fit=crop&crop=center",
+      features: ["[PREMIUM FEATURE 1]", "[PREMIUM FEATURE 2]", "[PREMIUM FEATURE 3]", "[PREMIUM FEATURE 4]"],
+      imageUrl: "[PRODUCT IMAGE URL]",
       pros: [
-        "Tournament-grade precision",
-        "Mechanical buttons feel amazing",
-        "Hall effect sticks prevent drift",
-        "Includes premium accessories"
+        "[POSITIVE POINT 1]",
+        "[POSITIVE POINT 2]",
+        "[POSITIVE POINT 3]",
+        "[POSITIVE POINT 4]"
       ],
       cons: [
-        "Most expensive option",
-        "Can be overwhelming for casual gamers"
+        "[NEGATIVE POINT 1]",
+        "[NEGATIVE POINT 2]"
       ]
     },
     {
       id: 5,
-      name: "Flex Controller Deluxe",
-      description: "Revolutionary modular controller system with swappable components, adaptive triggers, and cross-platform compatibility. Perfect for both casual and competitive gaming experiences.",
-      affiliateUrl: "https://amazon.com/product-5",
-      reviewUrl: "https://example-review-site.com/flex-controller-review",
-      price: "$74.99",
-      rating: 4.6,
-      features: ["Modular Design", "Adaptive Triggers", "Cross-Platform", "Swappable Parts"],
-      imageUrl: "https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?w=400&h=300&fit=crop&crop=center",
+      name: "[PRODUCT 5 NAME]",
+      description: "[DETAILED PRODUCT DESCRIPTION - HIGHLIGHT INNOVATION OR SPECIAL FEATURES]",
+      affiliateUrl: "[YOUR AFFILIATE LINK]",
+      reviewUrl: "[LINK TO DETAILED REVIEW - OPTIONAL]",
+      price: "[CURRENT PRICE]",
+      rating: 4.7,
+      features: ["[INNOVATIVE FEATURE 1]", "[INNOVATIVE FEATURE 2]", "[INNOVATIVE FEATURE 3]", "[INNOVATIVE FEATURE 4]"],
+      imageUrl: "[PRODUCT IMAGE URL]",
       pros: [
-        "Unique modular design",
-        "Cross-platform compatibility",
-        "Adaptive triggers work great",
-        "Future-proof with swappable parts"
+        "[POSITIVE POINT 1]",
+        "[POSITIVE POINT 2]",
+        "[POSITIVE POINT 3]",
+        "[POSITIVE POINT 4]"
       ],
       cons: [
-        "Modular system can feel loose",
-        "Learning curve for customization"
+        "[NEGATIVE POINT 1]",
+        "[NEGATIVE POINT 2]"
       ]
     }
   ]
