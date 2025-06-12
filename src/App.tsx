@@ -156,8 +156,20 @@ function App() {
 
             <p className="text-gray-600 mb-6 leading-relaxed text-lg lg:text-xl">{product.description}</p>
 
+            {/* Features */}
+            <div className="flex flex-wrap gap-2 mb-6 justify-start">
+              {product.features.map((feature, index) => (
+                <span
+                  key={index}
+                  className="bg-gradient-to-r from-blue-50 to-purple-50 text-blue-700 px-4 py-2 rounded-full text-sm lg:text-base font-medium border border-blue-200"
+                >
+                  {feature}
+                </span>
+              ))}
+            </div>
+
             {/* Pros and Cons */}
-            <div className="grid md:grid-cols-2 gap-4 mb-6">
+            <div className="grid md:grid-cols-2 gap-4 mb-8">
               {/* Pros */}
               <div className="bg-green-50 rounded-2xl p-4 border border-green-200">
                 <h4 className="font-semibold text-green-800 mb-3 flex items-center">
@@ -189,18 +201,6 @@ function App() {
                   ))}
                 </ul>
               </div>
-            </div>
-
-            {/* Features */}
-            <div className="flex flex-wrap gap-2 mb-8 justify-start">
-              {product.features.map((feature, index) => (
-                <span
-                  key={index}
-                  className="bg-gradient-to-r from-blue-50 to-purple-50 text-blue-700 px-4 py-2 rounded-full text-sm lg:text-base font-medium border border-blue-200"
-                >
-                  {feature}
-                </span>
-              ))}
             </div>
 
             {/* Action Buttons */}
