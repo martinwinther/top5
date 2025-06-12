@@ -184,26 +184,26 @@ function App() {
         <div className="max-w-7xl mx-auto">
         <div className="bg-white/60 backdrop-blur-xl rounded-3xl shadow-xl p-12 border border-gray-200/50 mb-16">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">Why Trust Our Recommendations?</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">How We Choose Our Recommendations</h2>
             <p className="text-xl leading-relaxed text-gray-700 mb-8">
-              After 200+ hours of hands-on testing and analyzing user feedback from over 10,000 gamers, 
-              we've identified the absolute best {topic.toLowerCase()} available in {currentMonth} {currentYear}. 
-              Our lab-tested recommendations are based on performance, durability, value, and real-world gaming experience.
+              We spend 100+ hours researching and analyzing thousands of real user reviews, expert opinions, and detailed product comparisons. 
+              Our carefully curated list represents the absolute best {topic.toLowerCase()} based on verified customer experiences, 
+              performance data, and value analysis from trusted sources across the web.
             </p>
             <div className="grid md:grid-cols-3 gap-8">
               <div className="text-center">
                 <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl mx-auto mb-4 flex items-center justify-center">
-                  <span className="text-2xl">🔬</span>
+                  <span className="text-2xl">📋</span>
                 </div>
-                <h3 className="font-bold text-gray-900 mb-2">Lab Tested</h3>
-                <p className="text-gray-600">Rigorous performance testing</p>
+                <h3 className="font-bold text-gray-900 mb-2">Curated Research</h3>
+                <p className="text-gray-600">Handpicked from extensive research</p>
               </div>
               <div className="text-center">
                 <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-500 rounded-2xl mx-auto mb-4 flex items-center justify-center">
                   <span className="text-2xl">👥</span>
                 </div>
-                <h3 className="font-bold text-gray-900 mb-2">User Verified</h3>
-                <p className="text-gray-600">10,000+ gamer reviews analyzed</p>
+                <h3 className="font-bold text-gray-900 mb-2">Real User Reviews</h3>
+                <p className="text-gray-600">Based on verified customer feedback</p>
               </div>
               <div className="text-center">
                 <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-2xl mx-auto mb-4 flex items-center justify-center">
@@ -229,16 +229,16 @@ function App() {
 
         {/* Bottom CTA Section */}
         <div className="mt-20 text-center bg-gradient-to-r from-blue-600 to-purple-600 rounded-3xl p-12 text-white shadow-2xl max-w-6xl mx-auto">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">Why Trust Our Recommendations?</h2>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">Transparent & Honest Curation</h2>
           <p className="text-lg sm:text-xl opacity-90 mb-8 max-w-3xl mx-auto">
-            We spend hundreds of hours testing so you don't have to. Our unbiased reviews help you make confident purchasing decisions.
+            We research extensively and handpick products based on real customer reviews and expert analysis. No products, no bias - just honest recommendations.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <div className="bg-white/20 backdrop-blur-sm px-6 py-3 rounded-full">
-              <span className="font-semibold">🔬 Independent Testing Lab</span>
+              <span className="font-semibold">🔍 Research-Based Selection</span>
             </div>
             <div className="bg-white/20 backdrop-blur-sm px-6 py-3 rounded-full">
-              <span className="font-semibold">📊 Data-Driven Reviews</span>
+              <span className="font-semibold">💯 Unbiased Curation</span>
             </div>
           </div>
         </div>
