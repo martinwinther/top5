@@ -127,7 +127,7 @@ function App() {
         {/* Main Content with Image */}
         <div className="flex flex-col lg:flex-row gap-6 lg:gap-8">
           {/* Product Image */}
-          <div className="flex-shrink-0">
+          <div className="flex-shrink-0 flex items-center">
             <div className="w-full lg:w-64 h-48 lg:h-64 rounded-2xl overflow-hidden shadow-lg bg-gray-100">
               <img 
                 src={product.imageUrl} 
