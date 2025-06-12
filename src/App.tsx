@@ -11,6 +11,8 @@ interface Product {
   rating: number
   features: string[]
   imageUrl: string
+  pros: string[]
+  cons: string[]
 }
 
 function App() {
@@ -31,7 +33,9 @@ function App() {
       originalPrice: "$99.99",
       rating: 4.9,
       features: ["40h Battery", "Haptic Feedback", "Customizable Buttons", "Ultra-Responsive"],
-      imageUrl: "https://images.unsplash.com/photo-1606144042614-b2417e99c4e3?w=400&h=300&fit=crop&crop=center"
+      imageUrl: "https://images.unsplash.com/photo-1606144042614-b2417e99c4e3?w=400&h=300&fit=crop&crop=center",
+      pros: ["Exceptional 40-hour battery life", "Premium build quality", "Advanced haptic feedback", "Highly customizable buttons"],
+      cons: ["Higher price point", "Slightly heavier than standard controllers"]
     },
     {
       id: 2,
@@ -42,7 +46,9 @@ function App() {
       price: "$64.99",
       rating: 4.8,
       features: ["RGB Lighting", "Programmable Macros", "Gyroscope", "Wireless"],
-      imageUrl: "https://images.unsplash.com/photo-1592750475338-74b7b21085ab?w=400&h=300&fit=crop&crop=center"
+      imageUrl: "https://images.unsplash.com/photo-1592750475338-74b7b21085ab?w=400&h=300&fit=crop&crop=center",
+      pros: ["Great value for money", "Stunning RGB lighting effects", "Programmable macros", "Comfortable ergonomic design"],
+      cons: ["RGB can drain battery faster", "Macro setup can be complex for beginners"]
     },
     {
       id: 3,
@@ -53,7 +59,9 @@ function App() {
       price: "$54.99",
       rating: 4.7,
       features: ["Textured Grip", "Fast Charging", "Dual Vibration", "Adjustable Triggers"],
-      imageUrl: "https://images.unsplash.com/photo-1542751371-adc38448a05e?w=400&h=300&fit=crop&crop=center"
+      imageUrl: "https://images.unsplash.com/photo-1542751371-adc38448a05e?w=400&h=300&fit=crop&crop=center",
+      pros: ["Excellent grip texture", "Fast USB-C charging", "Great value for money", "Adjustable trigger sensitivity"],
+      cons: ["Basic design aesthetic", "No advanced features like RGB"]
     },
     {
       id: 4,
@@ -64,7 +72,9 @@ function App() {
       price: "$89.99",
       rating: 4.9,
       features: ["Mechanical Buttons", "Hall Effect Sticks", "Tournament Grade", "Carrying Case"],
-      imageUrl: "https://images.unsplash.com/photo-1611532736597-de2d4265fba3?w=400&h=300&fit=crop&crop=center"
+      imageUrl: "https://images.unsplash.com/photo-1611532736597-de2d4265fba3?w=400&h=300&fit=crop&crop=center",
+      pros: ["Tournament-grade precision", "Mechanical buttons feel amazing", "Hall effect sticks prevent drift", "Includes premium accessories"],
+      cons: ["Most expensive option", "Can be overwhelming for casual gamers"]
     },
     {
       id: 5,
@@ -75,7 +85,9 @@ function App() {
       price: "$74.99",
       rating: 4.6,
       features: ["Modular Design", "Adaptive Triggers", "Cross-Platform", "Swappable Parts"],
-      imageUrl: "https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?w=400&h=300&fit=crop&crop=center"
+      imageUrl: "https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?w=400&h=300&fit=crop&crop=center",
+      pros: ["Unique modular design", "Cross-platform compatibility", "Adaptive triggers work great", "Future-proof with swappable parts"],
+      cons: ["Modular system can feel loose", "Learning curve for customization"]
     }
   ]
 
@@ -143,6 +155,41 @@ function App() {
             </div>
 
             <p className="text-gray-600 mb-6 leading-relaxed text-lg lg:text-xl">{product.description}</p>
+
+            {/* Pros and Cons */}
+            <div className="grid md:grid-cols-2 gap-4 mb-6">
+              {/* Pros */}
+              <div className="bg-green-50 rounded-2xl p-4 border border-green-200">
+                <h4 className="font-semibold text-green-800 mb-3 flex items-center">
+                  <span className="mr-2">✓</span>
+                  Pros
+                </h4>
+                <ul className="space-y-2">
+                  {product.pros.map((pro, index) => (
+                    <li key={index} className="text-green-700 text-sm flex items-start">
+                      <span className="text-green-500 mr-2 mt-0.5">•</span>
+                      {pro}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              {/* Cons */}
+              <div className="bg-red-50 rounded-2xl p-4 border border-red-200">
+                <h4 className="font-semibold text-red-800 mb-3 flex items-center">
+                  <span className="mr-2">✕</span>
+                  Cons
+                </h4>
+                <ul className="space-y-2">
+                  {product.cons.map((con, index) => (
+                    <li key={index} className="text-red-700 text-sm flex items-start">
+                      <span className="text-red-500 mr-2 mt-0.5">•</span>
+                      {con}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
 
             {/* Features */}
             <div className="flex flex-wrap gap-2 mb-8 justify-start">
