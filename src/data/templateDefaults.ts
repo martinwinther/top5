@@ -55,7 +55,7 @@ export const templateDefaults = {
     ]
   },
   footer: {
-    disclaimer: "As an Amazon Associate, we earn from qualifying purchases. This helps fund our extensive testing process at no additional cost to you.",
-    lastUpdated: "Prices and availability subject to change. Last updated: {month} {year} • All recommendations based on independent testing and analysis."
+    disclaimer: "As an Amazon Associate, we earn from qualifying purchases. This helps fund our extensive research process at no additional cost to you.",
+    lastUpdated: "Prices and availability subject to change. Last updated: {month} {year}"
   }
 } as const 
