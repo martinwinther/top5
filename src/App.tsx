@@ -229,16 +229,16 @@ function App() {
 
         {/* Bottom CTA Section */}
         <div className="mt-20 text-center bg-gradient-to-r from-blue-600 to-purple-600 rounded-3xl p-12 text-white shadow-2xl max-w-6xl mx-auto">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">Ready to Upgrade Your Gaming?</h2>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">Why Trust Our Recommendations?</h2>
           <p className="text-lg sm:text-xl opacity-90 mb-8 max-w-3xl mx-auto">
-            Don't settle for subpar controllers. Choose from our expertly tested top 5 and experience gaming like never before.
+            We spend hundreds of hours testing so you don't have to. Our unbiased reviews help you make confident purchasing decisions.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <div className="bg-white/20 backdrop-blur-sm px-6 py-3 rounded-full">
-              <span className="font-semibold">🚀 Free shipping on all recommendations</span>
+              <span className="font-semibold">🔬 Independent Testing Lab</span>
             </div>
             <div className="bg-white/20 backdrop-blur-sm px-6 py-3 rounded-full">
-              <span className="font-semibold">💯 30-day return policy</span>
+              <span className="font-semibold">📊 Data-Driven Reviews</span>
             </div>
           </div>
         </div>
