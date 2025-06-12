@@ -231,19 +231,69 @@ function App() {
   return (
     <div className="min-h-screen w-full bg-gradient-to-br from-gray-50 via-blue-50 to-purple-50">
       {/* Hero Section */}
-      <div className="relative overflow-hidden w-full">
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/10 to-purple-600/10 w-full"></div>
-        <div className="relative w-full px-4 sm:px-6 lg:px-8 py-20">
+      <div className="relative overflow-hidden w-full bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100">
+        {/* Background Elements */}
+        <div className="absolute inset-0">
+          <div className="absolute top-20 left-10 w-72 h-72 bg-blue-400/20 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-20 right-10 w-96 h-96 bg-purple-400/20 rounded-full blur-3xl"></div>
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-r from-blue-300/10 to-purple-300/10 rounded-full blur-3xl"></div>
+        </div>
+        
+        <div className="relative w-full px-4 sm:px-6 lg:px-8 py-24 lg:py-32">
           <div className="text-center max-w-7xl mx-auto">
-            <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-black text-gray-900 mb-6 leading-tight">
+            {/* Small badge */}
+            <div className="inline-flex items-center gap-2 bg-white/90 backdrop-blur-sm px-4 py-2 rounded-full shadow-lg border border-gray-200/50 mb-8">
+              <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+              <span className="text-gray-700 font-medium text-sm">Updated {currentMonth} {currentYear}</span>
+            </div>
+            
+            <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-black text-gray-900 mb-8 leading-tight tracking-tight">
               {pageTitle}
             </h1>
-            <p className="text-lg sm:text-xl md:text-2xl text-gray-600 mb-4 max-w-4xl mx-auto">
-              {currentMonth} {currentYear} • Expertly Curated & Tested
+            
+            {/* Value proposition */}
+            <p className="text-xl sm:text-2xl md:text-3xl text-gray-700 mb-8 max-w-4xl mx-auto font-light leading-relaxed">
+              Handpicked from thousands of reviews to save you time and money
             </p>
-            <div className="inline-flex items-center gap-2 bg-white/80 backdrop-blur-sm px-6 py-3 rounded-full shadow-lg border border-gray-200/50">
-              <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
-              <span className="text-gray-700 font-medium">Updated Daily</span>
+            
+            {/* Trust indicators */}
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-8 mb-12">
+              <div className="flex items-center gap-3 bg-white/80 backdrop-blur-sm px-6 py-3 rounded-2xl shadow-md border border-gray-200/50">
+                <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center">
+                  <span className="text-white text-lg">🔍</span>
+                </div>
+                <div className="text-left">
+                  <div className="font-semibold text-gray-900">100+ Hours</div>
+                  <div className="text-sm text-gray-600">Research Time</div>
+                </div>
+              </div>
+              
+              <div className="flex items-center gap-3 bg-white/80 backdrop-blur-sm px-6 py-3 rounded-2xl shadow-md border border-gray-200/50">
+                <div className="w-10 h-10 bg-gradient-to-br from-green-500 to-blue-500 rounded-xl flex items-center justify-center">
+                  <span className="text-white text-lg">⭐</span>
+                </div>
+                <div className="text-left">
+                  <div className="font-semibold text-gray-900">1,000+</div>
+                  <div className="text-sm text-gray-600">Reviews Analyzed</div>
+                </div>
+              </div>
+              
+              <div className="flex items-center gap-3 bg-white/80 backdrop-blur-sm px-6 py-3 rounded-2xl shadow-md border border-gray-200/50">
+                <div className="w-10 h-10 bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl flex items-center justify-center">
+                  <span className="text-white text-lg">✓</span>
+                </div>
+                <div className="text-left">
+                  <div className="font-semibold text-gray-900">Unbiased</div>
+                  <div className="text-sm text-gray-600">No Sponsorships</div>
+                </div>
+              </div>
+            </div>
+            
+            {/* Scroll indicator */}
+            <div className="animate-bounce">
+              <div className="w-8 h-12 border-2 border-gray-400 rounded-full mx-auto flex justify-center">
+                <div className="w-1 h-3 bg-gray-400 rounded-full mt-2 animate-pulse"></div>
+              </div>
             </div>
           </div>
         </div>
