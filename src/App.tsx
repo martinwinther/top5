@@ -10,6 +10,7 @@ interface Product {
   originalPrice?: string
   rating: number
   features: string[]
+  imageUrl: string
 }
 
 function App() {
@@ -29,7 +30,8 @@ function App() {
       price: "$79.99",
       originalPrice: "$99.99",
       rating: 4.9,
-      features: ["40h Battery", "Haptic Feedback", "Customizable Buttons", "Ultra-Responsive"]
+      features: ["40h Battery", "Haptic Feedback", "Customizable Buttons", "Ultra-Responsive"],
+      imageUrl: "https://images.unsplash.com/photo-1606144042614-b2417e99c4e3?w=400&h=300&fit=crop&crop=center"
     },
     {
       id: 2,
@@ -39,7 +41,8 @@ function App() {
       reviewUrl: "https://example-review-site.com/gamemaster-pro-review",
       price: "$64.99",
       rating: 4.8,
-      features: ["RGB Lighting", "Programmable Macros", "Gyroscope", "Wireless"]
+      features: ["RGB Lighting", "Programmable Macros", "Gyroscope", "Wireless"],
+      imageUrl: "https://images.unsplash.com/photo-1592750475338-74b7b21085ab?w=400&h=300&fit=crop&crop=center"
     },
     {
       id: 3,
@@ -49,7 +52,8 @@ function App() {
       reviewUrl: "https://example-review-site.com/ultra-grip-review",
       price: "$54.99",
       rating: 4.7,
-      features: ["Textured Grip", "Fast Charging", "Dual Vibration", "Adjustable Triggers"]
+      features: ["Textured Grip", "Fast Charging", "Dual Vibration", "Adjustable Triggers"],
+      imageUrl: "https://images.unsplash.com/photo-1542751371-adc38448a05e?w=400&h=300&fit=crop&crop=center"
     },
     {
       id: 4,
@@ -59,7 +63,8 @@ function App() {
       reviewUrl: "https://example-review-site.com/powerplay-review",
       price: "$89.99",
       rating: 4.9,
-      features: ["Mechanical Buttons", "Hall Effect Sticks", "Tournament Grade", "Carrying Case"]
+      features: ["Mechanical Buttons", "Hall Effect Sticks", "Tournament Grade", "Carrying Case"],
+      imageUrl: "https://images.unsplash.com/photo-1611532736597-de2d4265fba3?w=400&h=300&fit=crop&crop=center"
     },
     {
       id: 5,
@@ -69,7 +74,8 @@ function App() {
       reviewUrl: "https://example-review-site.com/flex-controller-review",
       price: "$74.99",
       rating: 4.6,
-      features: ["Modular Design", "Adaptive Triggers", "Cross-Platform", "Swappable Parts"]
+      features: ["Modular Design", "Adaptive Triggers", "Cross-Platform", "Swappable Parts"],
+      imageUrl: "https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?w=400&h=300&fit=crop&crop=center"
     }
   ]
 
@@ -106,53 +112,70 @@ function App() {
       )}
 
       <div className="mt-4">
-        <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between mb-6 gap-4">
+        {/* Main Content with Image */}
+        <div className="flex flex-col lg:flex-row gap-6 lg:gap-8">
+          {/* Product Image */}
+          <div className="flex-shrink-0">
+            <div className="w-full lg:w-64 h-48 lg:h-64 rounded-2xl overflow-hidden shadow-lg bg-gray-100">
+              <img 
+                src={product.imageUrl} 
+                alt={product.name}
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+            </div>
+          </div>
+
+          {/* Content */}
           <div className="flex-1">
-            <h3 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors duration-300">
-              {product.name}
-            </h3>
-            <StarRating rating={product.rating} />
+            <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between mb-6 gap-4">
+              <div className="flex-1">
+                <h3 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors duration-300">
+                  {product.name}
+                </h3>
+                <StarRating rating={product.rating} />
+              </div>
+              <div className="text-left lg:text-right">
+                <div className="text-3xl lg:text-4xl font-bold text-gray-900">{product.price}</div>
+                {product.originalPrice && (
+                  <div className="text-lg text-gray-500 line-through">{product.originalPrice}</div>
+                )}
+              </div>
+            </div>
+
+            <p className="text-gray-600 mb-6 leading-relaxed text-lg lg:text-xl">{product.description}</p>
+
+            {/* Features */}
+            <div className="flex flex-wrap gap-2 mb-8 justify-start">
+              {product.features.map((feature, index) => (
+                <span
+                  key={index}
+                  className="bg-gradient-to-r from-blue-50 to-purple-50 text-blue-700 px-4 py-2 rounded-full text-sm lg:text-base font-medium border border-blue-200"
+                >
+                  {feature}
+                </span>
+              ))}
+            </div>
+
+            {/* Action Buttons */}
+            <div className="flex flex-col sm:flex-row gap-4">
+              <a
+                href={product.affiliateUrl}
+                target="_blank"
+                rel="nofollow noopener noreferrer"
+                className="flex-1 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-2xl transition-all duration-300 text-center text-lg lg:text-xl shadow-lg hover:shadow-xl transform hover:scale-105"
+              >
+                Check Price →
+              </a>
+              <a
+                href={product.reviewUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex-1 bg-gray-100 hover:bg-gray-200 text-gray-800 font-semibold py-4 px-8 rounded-2xl transition-all duration-300 text-center text-lg lg:text-xl border-2 border-gray-200 hover:border-gray-300"
+              >
+                Read Review
+              </a>
+            </div>
           </div>
-          <div className="text-left lg:text-right">
-            <div className="text-3xl lg:text-4xl font-bold text-gray-900">{product.price}</div>
-            {product.originalPrice && (
-              <div className="text-lg text-gray-500 line-through">{product.originalPrice}</div>
-            )}
-          </div>
-        </div>
-
-        <p className="text-gray-600 mb-6 leading-relaxed text-lg lg:text-xl">{product.description}</p>
-
-        {/* Features */}
-        <div className="flex flex-wrap gap-2 mb-8 justify-center lg:justify-start">
-          {product.features.map((feature, index) => (
-            <span
-              key={index}
-              className="bg-gradient-to-r from-blue-50 to-purple-50 text-blue-700 px-4 py-2 rounded-full text-sm lg:text-base font-medium border border-blue-200"
-            >
-              {feature}
-            </span>
-          ))}
-        </div>
-
-        {/* Action Buttons */}
-        <div className="flex flex-col sm:flex-row gap-4 max-w-2xl mx-auto lg:mx-0">
-          <a
-            href={product.affiliateUrl}
-            target="_blank"
-            rel="nofollow noopener noreferrer"
-            className="flex-1 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-2xl transition-all duration-300 text-center text-lg lg:text-xl shadow-lg hover:shadow-xl transform hover:scale-105"
-          >
-            Check Price →
-          </a>
-          <a
-            href={product.reviewUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex-1 bg-gray-100 hover:bg-gray-200 text-gray-800 font-semibold py-4 px-8 rounded-2xl transition-all duration-300 text-center text-lg lg:text-xl border-2 border-gray-200 hover:border-gray-300"
-          >
-            Read Review
-          </a>
         </div>
       </div>
     </div>
