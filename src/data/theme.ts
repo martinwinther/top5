@@ -90,12 +90,15 @@ export const theme = {
 // Helper function to get Tailwind class from theme
 export const getThemeClass = (path: string): string => {
   const keys = path.split('.')
-  let current: any = theme
+  let current: unknown = theme
   
   for (const key of keys) {
-    current = current[key]
-    if (!current) return ''
+    if (current && typeof current === 'object' && key in current) {
+      current = (current as Record<string, unknown>)[key]
+    } else {
+      return ''
+    }
   }
   
-  return current
+  return typeof current === 'string' ? current : ''
 } 

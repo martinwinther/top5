@@ -19,7 +19,7 @@ interface Product {
 
 function App() {
   // All data now comes from JSON config
-  const { siteMetadata, heroSection, introSection, ctaSection, footer, products } = siteConfig
+  const { siteMetadata, heroSection, introSection, ctaSection, footer, products, faqSection } = siteConfig
   
   // Helper function to replace template variables
   const replaceVariables = (text: string): string => {
@@ -77,7 +77,7 @@ function App() {
             <div className="w-full lg:w-64 h-48 lg:h-64 rounded-2xl overflow-hidden shadow-lg bg-gray-100">
               <img 
                 src={product.imageUrl} 
-                alt={product.name}
+                alt={`${product.name} - Best ${siteMetadata.topic} with ${product.features[0]?.toLowerCase()}`}
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
               />
             </div>
@@ -225,10 +225,9 @@ function App() {
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-6 leading-tight tracking-tight" style={{ color: theme.neutral[900] }}>
               {siteMetadata.pageTitle}
             </h1>
-            
-            {/* Value proposition */}
+            {/* Blended value proposition with keywords */}
             <p className="text-lg sm:text-xl md:text-2xl mb-8 max-w-3xl mx-auto font-light leading-relaxed" style={{ color: theme.neutral[700] }}>
-              {heroSection.valueProposition}
+              Discover the best {siteMetadata.topic.toLowerCase()} for {siteMetadata.currentYear}—expertly reviewed and compared for performance, features, and value. Find your perfect {siteMetadata.topic.toLowerCase()}, from pro to budget, with our in-depth analysis and compatibility tips.
             </p>
             
             {/* Trust indicators */}
@@ -295,6 +294,32 @@ function App() {
                   <span className="font-semibold">{badge.icon} {badge.text}</span>
                 </div>
               ))}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* FAQ Section */}
+      <div className="w-full px-4 sm:px-6 lg:px-8 py-12">
+        <div className="max-w-7xl mx-auto">
+          <div className={`bg-white/60 backdrop-blur-xl rounded-3xl shadow-xl p-12 ${theme.borders.light} mb-16`}>
+            <div className="max-w-4xl mx-auto">
+              <h2 className="text-3xl font-bold mb-6 text-center" style={{ color: theme.neutral[900] }}>{faqSection.heading}</h2>
+              <p className="text-xl leading-relaxed mb-12 text-center" style={{ color: theme.neutral[700] }}>
+                {replaceVariables(faqSection.description)}
+              </p>
+              <div className="space-y-8">
+                {faqSection.questions.map((faq, index) => (
+                  <div key={index} className="border-b border-gray-200 pb-8 last:border-b-0">
+                    <h3 className="text-xl font-semibold mb-4" style={{ color: theme.neutral[900] }}>
+                      {faq.question}
+                    </h3>
+                    <p className="text-lg leading-relaxed" style={{ color: theme.neutral[700] }}>
+                      {faq.answer}
+                    </p>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>
